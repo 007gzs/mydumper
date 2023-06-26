@@ -475,6 +475,7 @@ gboolean process_metadata_global(){
           dbt->is_view=TRUE;
         }
         dbt->rows=g_ascii_strtoull(get_value(kf,groups[j],"Rows"),NULL, 10);
+        g_message("Getting this table name from metadatafile: %s",get_value(kf,groups[j],"table_name"));
         g_strfreev(keys);
       }else{
         database_table[0][strlen(database_table[0])-1]='\0';
